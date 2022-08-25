@@ -1,3 +1,14 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "covid_test";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+?>
+
 <?php 
 $sql = "SELECT * from lab_registry where galen_url_name='".$galen_url_name."' and verification_status='Verified'";
 $result = mysqli_query($conn, $sql);
